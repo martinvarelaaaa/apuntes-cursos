@@ -164,3 +164,23 @@ Los plugins son módulos que extienden a Jenkis, hay para hacer casi cualquier c
 Se puede conectar un Job directamente con un repositorio de Github. Para eso hay que crear un Job freestyle y en la configuración conectar un repositorio de Github.
 
 Luego se puede agregar un trigger que se ejecute cuando se haga push a los branchs que le digamos. Por ejemplo se podría configurar para que se ejecuten test o se haga un build.
+
+Para que los triggers funcionen, hay que instalar el plugin de Github y agregar el webhook en el repositorio de Github.
+
+## Pipelines
+
+Permiten configurar los Jobs a traves de código. Existen dos formas de implementarlos: `scripts pipeline` y `declarative pipelines`. 
+
+El Pipeline declarativo nos permite configurar todo a traves de código.
+
+Esto se hace atraves del `Jenkinsfile`, es parecido a los Dockerfile pero para Jenkins. Este archivo va en el repositorio de la aplicación que queramos configurar por Pipeline.
+
+Se pueden configurar: tools, options, parámetros, y stages.
+
+Las stages son muy importantes, es la forma en la que se le dice a Jenkis que ejecute los pasos del pipeline.
+
+## Slaves
+
+Los slaves permiten correr Jobs distribuidos. Sirve para cuando nuestro servidor queda sin recursos para ejecutar los Jobs en un solo nodo.
+
+Un slave se conecta al Jenkins master, y el Jenkins master le delega trabajo al slave. Permite escalar horizontalmente.
