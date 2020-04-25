@@ -77,3 +77,90 @@ docker logs jenkins-blueocean
 ```
 
 Instalar los plugins sugeridos por Jenkins y crear los usuarios administradores.
+
+## Manejo de usuarios
+
+Jenkis tiene muchas formas de manejar usuarios, pero la que viene por defecto es la de dejar que Jenkins maneje los usuarios.
+
+Es importante configurar bien los usuarios ya que estarán trabajndo sobre la insfractuctura. Por temas de privilegios, auditorias, etc.
+
+Ir a: `Manage Jenkins / Manage Users / Create User`
+
+Allí podrás crear un usuario y administrar sus privilegios.
+
+## ¿Qué es un Job?
+
+Es la unidad mas importante de Jenkins.
+
+Ir a `Create a new Job` y crear un primer Job:
+
+- Ponle un nombre
+- Selecciona un tipo, en este caso `Freestyle project`
+- Ir al tab `Build Enviroment`
+- Ir a la opción `Build` y seleccionar el valor `Execute Shell`
+- Escribir el comando `echo "Hola Mundo"`
+- Hacer click en `Build now`
+
+En el historial de tareas tiene que aparecer una nueva con el nombre #1, hacer click ahi y se podrá ver la consola con la ejecución del `echo`.
+
+```
++ echo 'Hola Mundo'
+Hola Mundo
+Finished: SUCCESS
+```
+
+Poder separar las ejecuciones de las tareas en diferentes jobs permite poder auditar todo lo que pasa en la insfractuctura de forma separada, eso es una gran herramienta para encontrar fallas o mejoras.
+
+## Configuración de un Job
+
+Hasta ahora creamos un job y vimos como ejecutarlo a mano. Pero generalmente vamos a querer automatizar la ejecución, esto se hace con la configuración.
+
+- Ingresar en el Job
+- Ir a la configuración
+
+Se pueden configurar cosas como: descripción del Job, descartar el Job luego de ejecutarse, projecto de GitHub, pasarle parámetros, deshabilitar el Job, fuentes de código, configurar los Triggers, build enviroment, etc.
+
+Es una buena práctica marcar la casilla `Delete workspace before builds starts` para que se limpien los directorios antes de cada ejecución. Otra es configurar que se aborte el Job si falla por más de x minútos.
+
+Si por ejemplo configuramos una parámetro de entrada al Job, con una variable `NAME`, el comando que teníamos anteriormente se podría ejecutar así:
+
+```
+echo "Hello Word $NAME"
+```
+
+Para ejecutarlo, ir a `Build with parameters`.
+
+También se pueden configurar `Post-build Actions`, esto permite por ejemplo, que cuando termine un Job, se envíe en mail, se haga un push en Github, etc.
+
+Hay un post-action build muy interesante que es el `Archive the artifacts`, sirve para interactuar con otros Jobs y hacer pipelines.
+
+## ¿Cómo Jenkins interactúa con su máquina local?
+
+Se puede hacer más que ejecutar un `echo`, para eso, por ejemplo podemos interactuar con la maquina.
+
+Como ya mencione, Jenkins permite ejecutar Node, Python, etc. Pero Jenkins, esta escrito en Java, ¿entonces como hace?
+
+Por ejemplo en lugar de ejecutar el `echo` se podría ejecutar Node.
+
+```
+echo "Hello Word $NAME"
+node
+```
+
+Luego de ejecutar el Job, este da error, porque Jenkins no encuentra Node. Eso es porque en la maquina en dónde se esta ejecutando Jenkins, Node no está instalado.
+
+Para solucionarlo, hay que ir a los plugins de Jenkis, [buscar el de Nodejs e instalarlo](https://plugins.jenkins.io/nodejs/), luego de instalarlo en la configuración se pueden configurar versiones y algunas cosas más.
+
+Ahora al ejecutar el Job nuevamente, funciona.
+
+## Los Plugins de Jenkins
+
+Como ya se hizo en el paso anterior, en Jenkins existen Plugins que se pueden instalar para facilitarnos la vida.
+
+Los plugins son módulos que extienden a Jenkis, hay para hacer casi cualquier cosa.
+
+## Conectar Jenkis a Github
+
+Se puede conectar un Job directamente con un repositorio de Github. Para eso hay que crear un Job freestyle y en la configuración conectar un repositorio de Github.
+
+Luego se puede agregar un trigger que se ejecute cuando se haga push a los branchs que le digamos. Por ejemplo se podría configurar para que se ejecuten test o se haga un build.
