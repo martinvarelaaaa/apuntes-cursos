@@ -2,11 +2,11 @@
 
 El input son los DATOS
 
-1. Trabajo puro de tratamientos de datos (70%)
+**1. Trabajo puro de tratamientos de datos (70%)**
 - ETL (extract, transform and load)
 - Database (familiarizarse con los datos, dibujarlos, primeros KPIs)
 
-2. Trabajo de análisis (30%)
+**2. Trabajo de análisis (30%)**
 - Análisis (relación entre variables, tendencias, modelos)
 - visualización (jugar con visualizaciones para presentar a otras personas)
 
@@ -14,18 +14,18 @@ El output son los INSIGHTS
 
 ## ¿Qué perfiles existen en Data Science?
 
-1. Data Scientist
+**1. Data Scientist**
 - Sabe de matematicas, programación y comunicación
 - Generalmente utiliza SQL, Python y R
 
-2. Data Engineer 
+**2. Data Engineer**
 - Sabe de programación, matematicas y big data
 - Utiliza Hadoop, NoSQL y Python
 - Se encarga de que las fuentes de datos sean confiables
 - Se encarga de que la extracción de datos pueda ser reproducible o programable
 - Limpia los datos
 
-3. Data Analysts
+**3. Data Analysts**
 - Sabe de estadistica, comunicación y conocimiento del negocio
 - Utiliza Excel, Tableau y SQL
 - Se enfoca en hacer análisis que estan muy ligados al negocio
@@ -47,24 +47,24 @@ Es importante saber trabajar con datos, pero también entender como se comportan
 
 **¿Qué hay que estudiar para trabajar en cada perfil?**
 
-1. Data Scientist
+**1. Data Scientist**
 
 - Matematicas
 - Computer Science
 
-2. Data Engineer 
+**2. Data Engineer** 
 
 - Computer Science
 - Ingenieria
 
-3. Data Analysts
+**3. Data Analysts**
 
 - Economia
 - Finanzas
 - Matematicas
 - Entender el negocio 
 
-4. Head of Data
+**4. Head of Data**
 
 - MBA
 - Finance
