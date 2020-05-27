@@ -298,3 +298,89 @@ Corresponde a la cuarta D. Por ejemplo corresponde a cuando aparece una publicid
 - Easy to implement
 - Easy to use
 - Easy to revenue
+
+## Economía de la Información, del Comportamiento, y Data Science
+
+Por ejemplo sirve para responder preguntas como: ¿cuanto cobrar el pop en el cine?, ¿qué tiene que ver 3 premios nobel con el precio de la cerveza artesanal?
+
+Esta parte se trata de ver como mezclar la economia con la big data.
+
+### Asimetría de la información
+
+Se da ca cuando una de las partes, en un contrato, tiene mas/menos información sobre un bien.
+
+### Selección adversa
+
+El proceso por el cual dada una asimetría de información, la selección no es correcta.
+
+### Riesgo moral
+
+Aquellas situaciones en las que un individuo tiene información asimetrica acerca de las consecuencias de sus propias acciones.
+
+-----------------------------------
+
+Con el análisis de datos, podemos tomar la desición con más información, disminuyendo la asimetría de información reduciendo el riesgo a caer en una selección adversa.
+
+### Behavioral economics
+
+Es la rama de la economía que estudia como las personas toman desiciones, utilizando la psicología y la neurociencia.
+
+El concepto de behavioral economics es muy importante para analizar mejor los datos y entender que sesgos tienen las personas y poder influir en ellos.
+
+Hay dos grandes enfoques en el Behavioral economics:
+
+1. Entender los sesgos
+2. Crear incentivos para mover a las personas a dónde queremos
+
+#### Curva de utilidad y preferencias
+
+Los conjuntos de puntos en el espacio de combinaciones de bienes para los que la satisfacción del consumidor es idéntica.
+
+No todos los productos son lo mismo, por ej 3 cafe pueden diferir en: experiencia de consumo, precio, etc.
+
+#### Bienes inferiores y bienes superiores
+
+El inferior es aquel cuya demanda aumenta a medida que la renta decrece.
+
+El superior es aquel que cuando aumenta su precio aumenta su demanda, ya que se considera un bien exclusivo.
+
+Se puede convertir un bien inferior en uno superior a traves de los datos.
+
+#### Disposición a pagar 
+
+Cantidad máxima que pagaría un cliente por un producto.
+
+#### Costo de oportunidad
+
+Es el costo de la alternativa a la que renunciamos cuando tomamos una determinada desición, incluyendo los beneficios que podríamos haber obtenido de haber escogido la opción alternativa.
+
+#### Irracionalidad
+
+Las personas en el corto plazo toman desiciones no racionales.
+
+### Caso Netflix
+
+Netflix es una empresa basada en datos que toman una cantidad de información para mantener a las personas mirando series.
+
+Se dice que las maratones de series generar dopamina. Llegaron a esa conclusión analizando los datos, dandose cuenta que la gente prefiere ver las series de corrido, preferiblemente los fines de semana.
+
+Netflix mirando como la gente mira la series, decide como lanzar las series. Generalmente lanzan las series los viernes, para que las personas las miren en forma de maratón.
+
+Esto es un comportamiento irracional de los usuarios, que por la generación de dopamina, mantiene a las personas enchufadas todo el fin de semana mirando una serie.
+
+¿Qué hay detrás de la dopamina? Irracionalidad, incentivos y hábitos.
+
+### Hook canvas
+
+Es un canvas que demuestra como se puede pasar desde lo emocional a los hábitos. Se puede buscar en google y verlo visualmente.
+
+1. Disparador (extrenos: llamada, mail, publicidad, tweet, etc) (internos: hábitos, emociones, aburrimiento, etc)
+2. Acción que genera recompensa (scroll, buscar en google, ver videos)
+3. Recompenza (de tribu, de cazador, de yo)
+4. Inversión (de tiempo, de dinero, de recuerdos)
+
+Esta rueda termina generando un hábito o un vicio. Con los datos se pueden armar este tipo de ruedas.
+
+Este canvas se puede aplicar para diferentes comportamientos para entender un poco como funciona el mecanismo. Por ejemplo: para entender a los juagdores de fornaite, a las personas que miran maratones de series, a los compradores compulsivos, etc.
+
+
