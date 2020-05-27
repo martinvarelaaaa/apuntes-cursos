@@ -9,10 +9,12 @@ Las notas fueron tomadas desde un ciclo de charlas dictadas por Diego Vallarino,
 El input son los DATOS
 
 **1. Trabajo puro de tratamientos de datos (70%)**
+
 - ETL (extract, transform and load)
 - Database (familiarizarse con los datos, dibujarlos, primeros KPIs)
 
 **2. Trabajo de análisis (30%)**
+
 - Análisis (relación entre variables, tendencias, modelos)
 - visualización (jugar con visualizaciones para presentar a otras personas)
 
@@ -21,10 +23,12 @@ El output son los INSIGHTS
 ## ¿Qué perfiles existen en Data Science?
 
 **1. Data Scientist**
+
 - Sabe de matematicas, programación y comunicación
 - Generalmente utiliza SQL, Python y R
 
 **2. Data Engineer**
+
 - Sabe de programación, matematicas y big data
 - Utiliza Hadoop, NoSQL y Python
 - Se encarga de que las fuentes de datos sean confiables
@@ -33,6 +37,7 @@ El output son los INSIGHTS
 - Reduce el riesgo de errores en los datos
 
 **3. Data Analysts**
+
 - Sabe de estadistica, comunicación y conocimiento del negocio
 - Utiliza Excel, Tableau y SQL
 - Se enfoca en hacer análisis que estan muy ligados al negocio
@@ -59,7 +64,7 @@ Es importante saber trabajar con datos, pero también entender como se comportan
 - Matematicas
 - Computer Science
 
-**2. Data Engineer** 
+**2. Data Engineer**
 
 - Computer Science
 - Ingenieria
@@ -69,7 +74,7 @@ Es importante saber trabajar con datos, pero también entender como se comportan
 - Economia
 - Finanzas
 - Matematicas
-- Entender el negocio 
+- Entender el negocio
 
 **4. Head of Data**
 
@@ -125,7 +130,7 @@ Lo primero es entender en que estado esta en la empresa en cuanto a como utiliza
 - R
 - Data Studio
 
-`Value = 4D + 3D`
+`Value = 4D + 3E`
 
 ## Cómo diseñar y seleccionar la data
 
@@ -134,17 +139,21 @@ Lo primero es entender cual es el problema a resolver, entender la necesidad de 
 ### Tipos de problemas comunes
 
 Comercial:
+
 - Segmentación
 - Originación
 - Retención
 - Pricing
 
 Caracteristicas:
+
 - Behavioral Science
 - Estructura de incentivos
 - Creación de valor
 
-**El diseño de las soluciones para estos problemas es la primera D, el Design.**
+### Design
+
+El diseño de las soluciones para estos problemas es la primera D, el Design.
 
 ### Data
 
@@ -152,4 +161,140 @@ Son todos los datos que tenemos para analizar el problema o generar predicciones
 
 **Esta bueno tener data pero hay que tener la data correcta y que genere valor para el problema que se quiere solucionar. Esta es la segunda D.**
 
+### Develop
 
+Es quizas la parte más conocida o entretenido, el desarrollo de los algoritmos. Se utiliza data analytics junto a machine learning. Es la tercera D.
+
+#### Descriptivos
+
+Hay algoritmos del tipo descriptivo, como por ejemplo:
+
+- Procesamiento de carteras de cliente
+- Text analytics
+- Análisis de sentimientos
+
+#### Predictivos
+
+Hay algoritmos del tipo predictivo, como por ejemplo:
+
+- Scoring de riesgo
+- Score de churn
+- Score recomendation
+
+-----------------------------------
+
+## 1. ¿Cómo visualizamos?
+
+Se pueden utilizar las siguientes herramientas:
+
+- Tableau, para análitica descriptiva, desarrollo de dashboards, etc
+- Power BI, parecido a Tableau, mejor integrada a Excel, para análitica descriptiva
+- Python y sus librerías para visualizar datos
+
+## 2. ¿Cómo modelamos?
+
+Como se pueden usar algoritmos para modelar. Hay dos grandes grupos de algoritmos de machine learning:
+
+### No supervisado
+
+En estos algoritmos no se tienen las variables de respuesta a partir de un input, no sabemos como se va a comportar la persona con determinado input, a diferencia del supervisado.
+
+#### Clustering
+
+Uno de los principales modelos de este tipo de algoritmos es la `Clustering` o clasterisación. Se trata de poder segmentar en función de patrones comunes. Por ejemplo, lograr algutinar en una función patrones de compra.
+
+Por ej:
+
+- Todas estas personas van a entrenar demañana
+- Todas estas personas van a la facultad
+
+Dependiendo de la cantidad de variables algutinadas que tenemos intentamos segmentar para predecir comportamientos.
+
+Es importante tener variables historicas pero tambien un pequeño a futuro. Eso hace que tengamos un cluster con una lógica de propensión.
+
+- kMeans, kmedoids, Fruzzy C-Means
+- Hierachical
+- Gaussian mixture
+- Neural networks
+- Hidden markov model
+
+### Supervisado
+
+Generalmente se usan para predecir a traves de modelos, dónde hay input data y output data. Son los mas comunes.
+
+Por ej:
+
+- Si una persona quiere comprar
+- Si una persona va a pagar
+- Si una persona quiere ir a x lugar
+
+Para predecir esto se tiene una enorme cantidad de datas con variables como por ejemplo: personas de tal edad, tal sexo, que compraron x cosa, que viajaron a x lugar.
+
+*Existen dos grandes tipos:*
+
+#### A. Clasificación
+
+El objetivo es poder predecir el comportamiento de una variable Dicotomica(si o no) o Categórica(hugo, paco, luís).
+
+- Support Vector Machines
+- Discriminant Analytics
+- Naive Bayes
+- Neareset Neighbor
+
+#### B. Regresión
+
+El objetivo es poder predecir el comportamiento de una variable Continua. El precio de un producto.
+
+- Linear regression GLM
+- SVR, GPR
+- Ensemble methods
+- Decision trees
+- Neural networks
+
+### ¿Cómo elegir cual usar?
+
+Dependiendo del problema que queramos resolver es el tipo de algoritmos o el conjunto de algoritmos a utilizar.
+
+Si en google ponemos "Machine Learning Algorithm Cheat Sheet" seguro salen gráficos que nos ayudan en la elección de estos algoritmos.
+
+Por ejemplo Microsoft Azure tiene uno muy bueno.
+
+Se puede usar:
+
+- Algoritmos en la nube (Azuro, AWS, Google)
+- Python
+
+Generalmente se ponen a competir a 3 o 4 algoritmos para ver cual performa mejor y da mejores predicciones.
+
+Para eso se suele separar la data en **70% para entrenamiento** y **30% para las pruebas de performance**.
+
+Los algoritmos o metodos de machine leargning más utilizados en el 2018-2019 son:
+
+- Regresion 56%
+- Decision Trees / Rules 48%
+- Clustering 47%
+- Visualization 46%
+- Random Forests 45%
+- Statics Descriptive 39%
+- K-Nearest Neighbours 33%
+- Time series 32%
+- Ensemble methods 30%
+- Text mining 28%
+- PCA 28%
+- Boosting 27%
+- Neural Networks 25%
+
+### Delivery
+
+Corresponde a la cuarta D. Por ejemplo corresponde a cuando aparece una publicidad en Twitter recomendando algo a partir de las busquedas del usuario, sus comportamientos, etc.
+
+### 4D x 3E
+
+- Design
+- Data
+- Develop
+- Delivery
+
+- Easy to implement
+- Easy to use
+- Easy to revenue
