@@ -7,7 +7,7 @@ Los objetivos de estos apuntes son:
 - Entender cómo y por qué graficar
 - Aprender a resolver problemas de búsqueda, ordenación y optimización
 
-[Repositorio de código utilizado]().
+[Repositorio de código utilizado](https://github.com/martinvarelaaaa/python-notes).
 
 Los apuntes son de cuando realice [el siguiente curso](https://platzi.com/clases/poo-python/).
 
@@ -91,8 +91,6 @@ pero todos reciben self como primer argumento.
 ```py
 class Hotel:
 
-    ...
-
     def anadir_huespedes(self, cantidad_de_huespedes):
         self.huespedes += cantidad_de_huespedes
 
@@ -108,3 +106,35 @@ hotel.anadir_huespedes(3)
 hotel.checkout(1)
 hotel.ocupacion_total() # 2
 ```
+
+## Tipos de datos abrstractos, clases e instancias
+
+En Python todo es un objeto y tiene un tipo. Las formas de interacturar con objetos son:
+
+- Creación
+- Manipulación
+- Destrucción
+
+Ventajas de utilizar estos objetos:
+
+- Descomposición
+- Abstracción
+- Encapsulación
+
+### Instancias
+
+Mientras que la clase es un molde, a los objetos también se los conoce como instancia. Cuando se crea una instancia, se ejecuta el método `__init__` de la clase. Todos los métodos de una clase reciben el parámetro `self`.
+
+La convención para definir una variable privada en Python es que el nombre comience con `_`.
+
+### Descomposición
+
+La descomposición es partir un problema en problemas más chicos. Las clases permiten crear mayores abstracciones en forma de componentes. Cada clase se encarga de una parte del problema y el programa se vuelve más fácil de mantener.
+
+Por ej un auto, funciona por descomposición. La rueda resuelva un problema, la puerta otro, la caja de cambios otro, etc.
+
+### Abstracción
+
+La abstracción permite enfocarnos en la información relevante. Separar la información central de los detalles secundarios. Podemos visualizar variables y métodos(privados y públicos).
+
+
