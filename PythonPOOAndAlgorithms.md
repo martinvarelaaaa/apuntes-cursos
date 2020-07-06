@@ -239,3 +239,43 @@ Esta es una función de tipo recursividad múltiple. Es un crecimiento exponenci
 - O(n log n) Log lineal
 - O(n**2) Polinominal
 - O(2**n) Exponencial
+
+## Algoritmos de búsqueda y ordenación
+
+### Búsqueda lineal
+
+Busca en todos los elementos de manera secuencial.
+
+¿Cuál es el peor caso? `O(n)`.
+
+```python
+def lineal_search(list, objective):
+    match = False
+
+    for element in list:
+        if element == objective:
+            match = True
+            break
+    return match
+```
+
+### Búsqueda binaria
+
+Se basa en la estrategia divide y conquista. El problema se divide en 2 en cada iteración hasta resolverlo. Este algoritmo asume que la lista esta ordenada.
+
+¿Cuál es el peor caso? ``.
+
+```python
+def binary_search(list, start, end, objective):
+    if start > end:
+        return False
+
+    middle = (start + end) // 2
+
+    if list[middle] == objective:
+        return True
+    elif list[middle] < objective:
+        return binary_search(list, middle + 1, end, objective)
+    elif list[middle] > objective:
+        return binary_search(list, start, middle - 1, objective)
+```
